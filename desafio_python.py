@@ -1,7 +1,7 @@
 # Aluna: Alex Vitoria Louveira Garcia
 # DATA: 08/04/2025
 
-# Bootcamp:  Suzano - Python Developer - Desafio: Criando um Sistema Bancário com Python
+# Bootcamp: Suzano - Python Developer - Desafio: Criando um Sistema Bancário com Python
 # Estruturas de decisão e repetição (if, while);
 # Manipulação de variáveis e entrada de dados;
 # Criação e organização de funções;
@@ -13,7 +13,6 @@
 # Sacar valores, respeitando um limite de valor: R$500 e quantidade de saques diários: 3 saques;
 # Visualizar o extrato bancário, com o histórico de operações e saldo atual;
 # Encerrar o sistema com segurança;
-
 
 menu = """
 
@@ -31,10 +30,11 @@ numero_saques = 0
 LIMITE_SAQUES = 3
 
 while True:
+
     opcao = input(menu).strip().lower()
 
     if not opcao:
-        continue  # Se apertar só Enter, volta pro menu
+        continue 
 
     elif opcao == "d":
         valor = input("Informe o valor do depósito: ").strip()
@@ -69,7 +69,7 @@ while True:
         
         elif excedeu_limite:
             print("Operação falhou! O valor do saque excede o limite!")
-        
+       
         elif excedeu_saques:
             print("Operação falhou! Número máximo de saques excedido!")
       
@@ -83,10 +83,12 @@ while True:
 
     elif opcao == "e":
         print("\n=================== EXTRATO ====================")
+
         if not extrato:
             print("Não foram realizadas movimentações.")
         else:
             print(extrato)
+        
         print(f"\nSaldo: R$ {saldo:.2f}")
         print("=================================================")
 
