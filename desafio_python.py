@@ -10,7 +10,7 @@
 # O sistema permite ao usuário:
 
 # Depositar valores em sua conta;
-# Sacar valores, respeitando um limite de valor e quantidade de saques diários;
+# Sacar valores, respeitando um limite de valor: R$500 e quantidade de saques diários: 3 saques;
 # Visualizar o extrato bancário, com o histórico de operações e saldo atual;
 # Encerrar o sistema com segurança;
 
@@ -83,7 +83,10 @@ while True:
 
     elif opcao == "e":
         print("\n=================== EXTRATO ====================")
-        print("Não foram realizadas movimentações." if not extrato else extrato)
+        if not extrato:
+            print("Não foram realizadas movimentações.")
+        else:
+            print(extrato)
         print(f"\nSaldo: R$ {saldo:.2f}")
         print("=================================================")
 
